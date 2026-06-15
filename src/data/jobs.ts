@@ -91,6 +91,7 @@ export const JOBS: Job[] = [
     minLevel: 150,
     locationType: 'port_airport',
     goods: [
+      { name: 'الاحجار النظيفة', port: 145, airport: 233, copper: 8, iron: 6, gold: 3 },
       { name: 'الحديد', port: 9, airport: 14 },
       { name: 'الذهب', port: 9, airport: 15 },
       { name: 'النحاس', port: 8, airport: 13 },

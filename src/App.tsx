@@ -79,11 +79,20 @@ const App: React.FC = () => {
     const goodsNeeded = Math.ceil(totalRP / xpPerGood);
 
     setError('');
-    setResult({
+    const result: any = {
       totalRP, goodsNeeded, xpPerGood,
       startLevel: from, endLevel: to,
       jobName: job.name, goodName: good.name, locationName,
-    });
+    };
+
+    // إذا كانت الأحجار النظيفة، حساب المعادن
+    if (good.name === 'الاحجار النظيفة' && good.copper && good.iron && good.gold) {
+      result.copper = goodsNeeded * good.copper;
+      result.iron = goodsNeeded * good.iron;
+      result.gold = goodsNeeded * good.gold;
+    }
+
+    setResult(result);
   };
 
   return (

@@ -5,6 +5,9 @@ export interface Good {
   port?: number;
   airport?: number;
   outside?: number;
+  copper?: number;
+  iron?: number;
+  gold?: number;
 }
 
 export interface Job {
@@ -24,4 +27,7 @@ export interface CalcResult {
   jobName: string;
   goodName: string;
   locationName: string;
+  copper?: number;
+  iron?: number;
+  gold?: number;
 }
